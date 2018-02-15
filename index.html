@@ -237,9 +237,9 @@
 			.jumbotron-mobile > h3 {
 				font-weight: normal;
 				font-size: 4.5vw;
-				color: lightcoral;
+				color: #fff;
 				font-style: italic;
-				text-shadow: .15vw .15vw .6vw black;
+				text-shadow: .15vw .15vw .6vw grey;
 
 			}
 			/* Cursors -- apparently, when I try to set this on an external css, the cursors are not working. */ 
@@ -307,12 +307,12 @@
 				margin-bottom: 25px;">
 				<div class="navbar-header">
 					<!-- BURGER -->
-					<div class="btn-group navbar-toggle center-block hidden-lg hidden-md hidden-sm no-p-m" data-toggle="collapse" data-target="#minimenu">
+					<div class="btn-group navbar-toggle center-block hidden-lg hidden-md hidden-sm no-p-m">
 						<a href="index.html" class="btn-group hidden-lg hidden-md" >
 							<img class="navbar-brand logo-nav btn btn-warning" src="res/logo.png" alt="Sandbox Logo">
 						</a>
-						<span class="navbar-brand page btn btn-primary brand-nav" style="font-size: 2em; ">Sandbox</span>
-						<span class="navbar-brand page btn btn-primary"><span class="glyphicon glyphicon-menu-hamburger"></span></span>
+						<span class="navbar-brand page btn btn-primary brand-nav" style="font-size: 2em;" data-toggle="collapse" data-target="#minimenu">Sandbox</span>
+						<span class="navbar-brand page btn btn-primary" data-toggle="collapse" data-target="#minimenu"><span class="glyphicon glyphicon-menu-hamburger"></span></span>
 					</div>
 					<a href="index.html" class="btn-group hidden-xs" >
 						<img class="navbar-brand logo-nav btn btn-warning" src="res/logo.png" alt="Sandbox Logo">
@@ -777,7 +777,7 @@
 		</aside>
 
 		<!-- Engineer & FINAL TEASE-->
-		<section class="container-fluid" id="contact">
+		<aside class="container-fluid" id="contact">
 			<div class="container alt-container-content"> <!-- style="border: 1px solid red;" -->
 				<div class="row">
 					<div class="col-sm-12 col-md-12 col-lg-12 center-block">
@@ -802,7 +802,7 @@
 					
 				</div>	
 			</div>
-		</section>
+		</aside>
 
 		<!-- FOOTER -->
 		<footer class="text-center container-fluid" style="background: dodgerblue; color: white;">
