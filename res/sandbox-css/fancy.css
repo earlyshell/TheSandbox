@@ -1,0 +1,83 @@
+/* Animation */
+.swim {
+	-webkit-animation-name: swimming;
+	-webkit-animation-duration: 60s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-play-state: running;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-fill-mode: backwards;
+	-moz-animation-name: swimming;
+	-moz-animation-duration: 60s;
+	-moz-animation-timing-function: linear;
+	-moz-animation-play-state: running;
+	-moz-animation-iteration-count: 1;
+	-moz-animation-fill-mode: backwards;
+	-o-animation-name: swimming;
+	-o-animation-duration: 60s;
+	-o-animation-timing-function: linear;
+	-o-animation-play-state: running;
+	-o-animation-iteration-count: 1;
+	-o-animation-fill-mode: backwards;
+	-ms-animation-name: swimming;
+	-ms-animation-duration: 60s;
+	-ms-animation-timing-function: linear;
+	-ms-animation-play-state: running;
+	-ms-animation-iteration-count: 1;
+	-ms-animation-fill-mode: backwards;
+	animation-name: swimming;
+	animation-duration: 60s;
+	animation-timing-function: linear;
+	animation-play-state: running;
+	animation-iteration-count: 1;
+	animation-fill-mode: backwards;	
+	display: block; position: fixed; left: 75%; top: 170px; z-index: -10; background-attachment: fixed;
+}
+@-webkit-keyframes swimming {
+	0% {display: block; position: fixed; left: 0px; top: 170px;	z-index: -10;
+		background-attachment: fixed;}
+	100% {display: block; position: fixed; left: 70%; top: 170px; z-index: -10; background-attachment: fixed;}
+}
+@-moz-keyframes swimming {
+	0% {display: block; position: fixed; left: 0px; top: 170px;	z-index: -10;
+		background-attachment: fixed;}
+	100% {display: block; position: fixed; left: 70%; top: 170px; z-index: -10; background-attachment: fixed;}
+}
+@-o-keyframes swimming {
+	0% {display: block; position: fixed; left: 0px; top: 170px; z-index: -10; background-attachment: fixed;}
+	100% {display: block; position: fixed; left: 70%; top: 170px; z-index: -10; background-attachment: fixed;}
+}
+@keyframes swimming {
+	0% {display: block; position: fixed; left: 0px; top: 170px; z-index: -10; background-attachment: fixed;}
+	100% {display: block; position: fixed; left: 70%; top: 170px; z-index: -10; background-attachment: fixed;}
+}
+
+
+/* Others */
+
+.balloon {
+	height: 300px;
+	width: 300px;
+	border: 5px solid black;
+	padding-bottom: -3px;
+	margin-bottom: -3px;
+	border-radius: 100% !important;
+	background: rgba(255, 255, 255, 0.5);
+	text-shadow: 1px 1px 5px grey;
+	text-align: center;
+}
+
+/* Teaser Constraint*/
+
+.w50h100 {width: 50px; height: 100px; }
+.w50h200 {width: 50px; height: 200px;}
+.w50h350 {width: 50px; height: 350px;}
+.w100h200 {width: 100px; height: 200px;}
+.w100h350 {width: 100px; height: 350px;}
+.w150h50 {width: 150px; height: 50px;}
+.w150h100 {width: 150px; height: 100px;}
+.w150h150 {width: 150px; height: 150px;}
+.w200h50 {width: 200px; height: 50px;}
+.w300h50 {width: 300px; height: 50px;}
+.w300h100 {width: 300px; height: 100px;}
+.w600h50 {width: 600px; height: 50px;}
+.w600h100 {width: 600px; height: 100px;}

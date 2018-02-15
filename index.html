@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<title>Sandbox</title>
+		<meta charset="utf-8">
+   		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, 	initial-scale=1">
+
+		<link rel="shortcut icon" type="image/x-icon" href="res/logo.ico" />
+		<link href="https://fonts.googleapis.com/css?family=Fredoka+One|Nunito" rel="stylesheet">
+    	
+    	
+    	<link href="res/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet"><!-- Bootstrap -->
+
+    	<link href="res/sandbox-css/fancy.css" rel="stylesheet">
+
+    	<style> /*Some altered bootstrap and personal declarations*/
+/*	    	[class*="container"],
+	    	[class*="row"],
+	    	[class*="col"]  {
+	    		border: 1px solid red;
+	    	}*/ /*GUIDE*/
+	    	body {
+	    		font-family: 'Nunito', sans-serif;
+	    		/*background-color: skyblue;*/
+	    		background: url("res/sea.png");
+	    		background-attachment: fixed;
+	    	}
+/*	    	.burger-correction {
+	    		background-color: white;
+	    	}
+	    	.burger-bord-corr {
+	    		border: 1px solid white;
+	    	}*/
+	    	.logo-nav {
+	    		margin-left: 15px !important;
+	    		padding: 0;
+	    	}
+	    	.brand-nav {
+	    		font-family: 'Fredoka One', cursive;
+	    	}
+	    	.alt-a:link,
+	    	.alt-a:visited {
+	    		background-color: #5bc0de;
+	    		border-radius: 30px;
+	    		color: white;
+	    	}
+	    	.alt-a:hover,
+	    	.alt-a:focus,
+	    	.alt-a:active {
+	    		color: #337ab7;
+	    		border-radius: 30px;
+	    	}
+	    	.alt-container {
+	    		max-width: 600px;
+	    		max-height: 600px;
+	    		min-width: 400px;
+	    		min-height: 400px;
+	    		height: 600px;
+	    		width: 600px;
+	    	}
+			.alt-container-content {
+				margin-top: 50px;
+				margin-bottom: 50px;
+			}
+			.italic {
+				font-style: italic;
+			}
+			.media-img-size {
+				max-height: 125px;
+				max-width: 125px;
+			}
+			.media-content-pright-20 {
+				padding-right: 20px;
+			}
+			.media-content-pleft-20 {
+				padding-left: 20px;
+			}
+			.alt-divider{
+				height: 1px;
+				margin: 15px 0;
+				overflow: hidden;
+				background-color: #e5e5e5;
+			}
+			.alt-img-rounded {
+				border-radius: 15px;
+			}
+			.alt-img-circle {
+				/*border: 10px outset mediumseagreen;*/
+				border-radius: 50%;
+				box-shadow: 2px 2px 8px grey;
+			}
+			.mt-30 {
+				margin-top: 30px;
+			}
+			.mb-30 {
+				margin-bottom: 30px;
+			}
+			.mb-10 {
+				margin-bottom: 10px;
+			}
+			.no-mb {
+				margin-bottom: 0px;
+			}
+			.label,
+			a[class*="btn"] {
+				border-radius: 15px;
+			}
+			blockquote > small {
+				font-style: italic;
+			}
+			.abt {
+				background: transparent;
+				line-height: 3em;
+				text-shadow: 1px 1px 5px lightgrey;
+			}
+			.abt::first-letter{
+				text-transform: uppercase;
+				font-size: 3em;
+			}
+			.contact-label {
+				font-weight: bold;
+			}
+			.bigger-caret {
+				border-top: 20px dashed;
+				border-top: 20px solid \9;
+				border-right: 20px solid transparent;
+				border-left: 20px solid transparent;
+			}
+			/* Ultimate Nav Fix */
+			.navbar-default {
+   				background-color: transparent;	
+    			border: none;
+
+			}
+			.dropdown-menu {
+				font-size: 14px;
+				min-width: 110px;
+				width: 110px !important;
+				text-align: center;
+				list-style: none;
+				background-color: rgba(255,255,255,0.25);
+				border: none;
+				-webkit-background-clip: padding-box;
+				-moz-background-clip: padding-box;
+				-o-background-clip: padding-box;
+				-ms-background-clip: padding-box;
+			        background-clip: padding-box;
+				border-radius: 4px 0 4px 4px !important;
+				-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+				-moz-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+				-o-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+				-ms-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+			          box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+			}
+
+			.dropdown-menu > li > a {
+			  display: block;
+			  padding: 0;
+			  clear: both;
+			  font-weight: normal;
+			  line-height: 1.42857143;
+			  color: dimgrey;
+			  white-space: nowrap;
+			}
+			.dropdown-menu > li > a:hover,
+			.dropdown-menu > li > a:focus {
+				color: #fff;
+				text-decoration: none;
+				background-color: #FFDAB9;
+			}
+			.dropdown-menu > .active > a,
+			.dropdown-menu > .active > a:hover,
+			.dropdown-menu > .active > a:focus {
+				color: #fff;
+				text-decoration: none;
+				background-color: #FFDAB9;
+				outline: 0;
+			}
+			.navbar-default .navbar-nav>li>a:hover {
+				color: white;
+				text-shadow: 0 0 3px 5px white;
+			}
+			.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+				color: #555;
+				background-color: #e7e7e7;
+				border-radius: 4px 4px 0 0;
+			}
+			.no-p-m {
+				margin: 0;
+				padding: 0;
+			}
+			textarea {
+				resize: none;
+			}
+			.alt-.divider {
+				height: 1px;
+				margin: 9px 0;
+				overflow: hidden;
+				background-color: #e5e5e5;
+			}
+			.nav > li > a:hover,
+			.nav > li > a:focus {
+				text-decoration: none;
+				background-color: transparent;
+				color: white;
+				/*text-shadow: 0 0 5px white;*/
+			}	
+			.link-pad-fix {
+				 padding: 2px 0 !important;
+				color: white;
+			}
+			.link-bg-fix {
+				background: #f0ad4e;
+				padding: 10px 10px 10px 10px;	
+				border-radius: 2px;	
+				display: inline-block;
+				width: 100px;
+
+			}
+			.link-bg-fix:hover,
+			.link-bg-fix:focus,
+			.link-bg-fix:active {
+				background: #eea236;
+			}
+			.jumbotron-mobile {
+				background: transparent;
+				margin-top: 225px;
+				text-align: center;
+			}
+			.jumbotron-mobile > h1 {
+				font-weight: bolder;
+				color: white;
+				font-size: 10vw;
+				text-shadow: .75vw .75vw 1.5vw black;
+			}
+			.jumbotron-mobile > h3 {
+				font-weight: normal;
+				font-size: 4.5vw;
+				color: lightcoral;
+				font-style: italic;
+				text-shadow: .15vw .15vw .6vw black;
+
+			}
+			/* Cursors -- apparently, when I try to set this on an external css, the cursors are not working. */ 
+			/*.tooltipcheat {
+				cursor: url("res/tooltipcheat.png"),auto;
+			}*/
+			.car {
+				-webkit-cursor: url("res/car.png") 53 23,auto;
+				-moz-cursor: url("res/car.png") 53 23,auto;
+				-o-cursor: url("res/car.png") 53 23,auto;
+				-ms-cursor: url("res/car.png") 53 23,auto;
+				cursor: url("res/car.png") 53 23,auto;
+			}
+			.cartop {
+				-webkit-cursor: url("res/car_top.png") 10 1,auto;
+				-moz-cursor: url("res/car_top.png") 10 1,auto;
+				-o-cursor: url("res/car_top.png") 10 1,auto;
+				-ms-cursor: url("res/car_top.png") 10 1,auto;
+				cursor: url("res/car_top.png") 10 1,auto;
+			}
+			.cartop-b {
+				-webkit-cursor: url("res/car_bottom.png") 10 53,auto;
+				-moz-cursor: url("res/car_bottom.png") 10 53,auto;
+				-o-cursor: url("res/car_bottom.png") 10 53,auto;
+				-ms-cursor: url("res/car_bottom.png") 10 53,auto;
+				cursor: url("res/car_bottom.png") 10 53,auto;
+			}
+			.car-back {
+				-webkit-cursor: url("res/car_backward.png") 1 23,auto;
+				-moz-cursor: url("res/car_backward.png") 1 23,auto;
+				-o-cursor: url("res/car_backward.png") 1 23,auto;
+				-ms-cursor: url("res/car_backward.png") 1 23,auto;
+				cursor: url("res/car_backward.png") 1 23,auto;
+			}
+			.train {
+				-webkit-cursor: url("res/train.png") 53 33,auto;
+				-moz-cursor: url("res/train.png") 53 33,auto;
+				-o-cursor: url("res/train.png") 53 33,auto;
+				-ms-cursor: url("res/train.png") 53 33,auto;
+				cursor: url("res/train.png") 53 33,auto;
+			}
+			.flip:hover {
+				content:url("res/hooray.png");
+			}
+			.dim {
+				-webkit-filter: contrast(90%);
+				-moz-filter: contrast(90%);
+				-o-filter: contrast(90%);
+				-ms-filter: contrast(90%);
+				filter: contrast(90%);
+			}
+			.glow:hover {
+				-webkit-filter: contrast(175%);
+				-moz-filter: contrast(175%);
+				-o-filter: contrast(175%);
+				-ms-filter: contrast(175%);
+				filter: contrast(175%);
+			}
+    	</style>
+	</head>
+	<body id="body">
+		<!-- CODE HERE -->
+		<div class="container-fluid">
+			<nav class="navbar" style="margin-top: 25px;
+				margin-bottom: 25px;">
+				<div class="navbar-header">
+					<!-- BURGER -->
+					<div class="btn-group navbar-toggle center-block hidden-lg hidden-md hidden-sm no-p-m" data-toggle="collapse" data-target="#minimenu">
+						<a href="index.html" class="btn-group hidden-lg hidden-md" >
+							<img class="navbar-brand logo-nav btn btn-warning" src="res/logo.png" alt="Sandbox Logo">
+						</a>
+						<span class="navbar-brand page btn btn-primary brand-nav" style="font-size: 2em; ">Sandbox</span>
+						<span class="navbar-brand page btn btn-primary"><span class="glyphicon glyphicon-menu-hamburger"></span></span>
+					</div>
+					<a href="index.html" class="btn-group hidden-xs" >
+						<img class="navbar-brand logo-nav btn btn-warning" src="res/logo.png" alt="Sandbox Logo">
+						<span class="navbar-brand page btn btn-primary brand-nav" style="font-size: 2em; ">Sandbox</span>
+					</a>
+				</div>
+				<div class="collapse" id="minimenu">
+					<ul class="nav navbar-nav navbar-right hidden-lg hidden-md hidden-sm" style="text-align: right; padding-right: 15px;">
+						<!-- <li><a href="#" class="alt-a">Inquire Now!</li> -->
+						<li class="dropdown"><a  class="link-pad-fix" href="#workshop"><span class="link-bg-fix">Workshop</span></a>
+						</li>
+						<li><a  class="link-pad-fix" href="#testimonials"><span class="link-bg-fix">Testimonials</span></a></li>
+						<li><a  class="link-pad-fix" href="#about"><span class="link-bg-fix">About</span></a></li>
+					</ul>
+				</div>
+				<div class="collapse navbar-collapse navbar-default" id="navmenu">
+					<ul class="nav navbar-nav navbar-right">
+						<!-- <li><a href="#" class="alt-a">Inquire Now!</li> -->
+						<li class="dropdown" style="margin-left: 10px;"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Workshop <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#drawidea">Drawing Ideas</a>
+								</li>
+								<li><a href="#type101">Typing 101</a>
+								</li>
+								<li><a href="#html9">HTML9</a>
+								</li>
+								<li><a href="#css7">CSS7</a>
+								</li>
+							</ul>
+						</li>
+						<li><a href="#testimonials">Testimonials</a></li>
+						<li><a href="#about">About</a></li>
+						<li style="margin-left: 10px;"><form action="#contact"><button class="btn btn-info btn-lg hidden-xs" style="margin-top: 3px; margin-right: 15px;">Inquire Now!</button></form></li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+
+		<!-- ATTENTION -->
+		<section class="container-fluid" style="height: 650px; background: url('res/attention_bg.png');">
+			<!-- Boat -->
+			<img src="res/dolphin.png" class="swim" alt="Boat">
+			<div class="containter jumbotron jumbotron-mobile hidden-sm hidden-md hidden-lg">
+				<h1>Start 'em young...</h1>
+				<h3>"happy now, happy later...because good study habits is a thing..."</h3>
+				<form action="#contact"><button name="inquire" class="btn btn-info btn-lg mt-30">Let's go!</button></form>
+			</div>	
+			<div class="container alt-container hidden-xs dim" style="margin-top: 25px;">
+				<div class="row w600h100">
+					<img src="res/600x100.png" alt="..." class="img-responsive" style="width: 600px; height: 100px;">
+ 				</div>
+				<div class="row">
+					<div class="col-sm-3 col-md-3 col-lg-3">
+						<div class="row">
+							<div class="col-sm-8 col-md-8 col-lg-8 w100h350" style="padding-left: 0; padding-right: 0;">
+								<img src="res/100x350.png" alt="..." class="" style="width: 100px; height: 350px;">
+							</div>
+							<div class="col-sm-4 col-md-4 col-lg-4 w50h350" style="padding-left: 0; padding-right: 0;">
+								<img src="res/50x350.png" alt="..." class="cartop dim glow" style="width: 50px; height: 350px;">
+							</div>
+						</div>
+						<div class="row car">
+							<img src="res/road_1.png" alt="..." class="w150h50 dim glow" style="width: 150px; height: 50px;">
+						</div>
+						<div class="row w150h50">
+							<img src="res/150x50.png" alt="..." class="" style="width: 150px; height: 50px;">
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-6 col-lg-6" style="padding-left: 15px; padding-right: 0;">
+						<div class="row w300h50">
+							<img src="res/300x50.png" alt="..." class="train dim glow" style="width: 300px; height: 50px;">
+						</div>
+						<div class="row w300h100">
+							<img src="res/300x100.png" alt="..." class="" style="width: 300px; height: 100px;">
+						</div>
+						<div class="row">
+							<div class="col-sm-4 col-md-4 col-lg-4 w100h200" style="padding-left: 0;">
+								<img src="res/100x200.png" alt="..." class="" style="width: 100px; height: 200px;">
+							</div>	
+							<div class="col-sm-8 col-md-8 col-lg-8">
+								<div class="row w200h50">
+									<img src="res/200x50.png" alt="..." class="car-back dim glow" style="width: 200px; height: 50px;">
+								</div>
+								<div class="row">
+									<div class="col-sm-3 col-md-3 col-lg-3 w50h100" style="padding-left: 0;">
+										<img src="res/50x100.png" alt="..." class="cartop-b dim glow" style="width: 50px; height: 100px;">
+									</div>
+									<div class="col-sm-9 col-md-9 col-lg-9 w150h100" style="padding-left: 0;">
+										<img src="res/150x100.png" alt="..." class="" style="width: 150px; height: 100px;">
+									</div>									
+								</div>
+								<div class="row w200h50 car">
+									<img src="res/200x50-b.png" alt="..." class="dim glow" style="width: 200px; height: 50px;">
+								</div>																
+							</div>
+						</div>
+						<div class="row w300h100">
+							<img src="res/300x100-b.png" alt="..." class="" style="width: 300px; height: 100px;">
+						</div>													
+					</div>
+					<div class="col-sm-3 col-md-3 col-lg-3" >
+						<div class="row">
+							<div class="col-sm-4 col-md-4 col-lg-4 w50h200" style="padding-left:0;">
+								<img src="res/50x200.png" alt="..." class="dim glow cartop-b" style="width: 50px; height: 200px;">
+							</div>
+							<div class="col-sm-8 col-md-8 col-lg-8 w100h200" style="padding-left: 0; padding-right: 0;">
+								<img src="res/100x200-b.png" alt="..." class="img-responsive" style="width: 100px; height: 200px;">						
+							</div>
+						</div>
+						<div class="row w150h100">
+							<img src="res/150x100-b.png" alt="..." class="" style="width: 150px; height: 100px;">
+						</div>
+						<div class="row w150h150 flip">
+							<img src="res/150x150.png" alt="..." class="dim glow" style="width: 150px; height: 150px; float: left;">
+
+						</div>
+					</div>
+				</div>
+				<div class="row w600h50" style="width: 600px; height: 50px;">
+				</div>
+			</div>
+		</section>
+
+		<!-- WORKSHOP -->
+		<section class="container-fluid" style="background-color: white; box-shadow: 0 0 3em 3em white; border-radius: 5em;"  id="workshop">
+			<div class="container alt-container-content panel panel-info"> <!-- style="border: 1px solid red;" -->
+				<div class="row panel-heading">
+					<div class="text-center">
+						<h1>
+							<strong class="">WORKSHOP</strong>
+						</h1>
+						<h3 style="margin-top: 0px;"><small style="font-style: italic;">"...behind every magic is a bundle of <strong>kid-friendly</strong> codes..."</small> <!-- <br><small class="italic">- Earl Hapal | Sandbox, Co-Founder</small> --></h3>
+					</div>
+				</div>
+
+				<div class="row mt-30">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-12 col-md-12 col-lg-6">
+								<div class="hidden-md hidden-lg text-center mt-30">
+									<h3 class="media-heading mb-30">Drawing Ideas 
+											<small><label class="label label-success">KIDS <span class="badge">6-12</span></label></small>
+									</h3>
+									<img class="media-object alt-img-rounded media-img-size center-block mb-10" src="res/drawing_ideas.png" alt="...">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+										consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+										proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+									</p>
+									<p>
+									- - - - -
+									</p>
+								</div>
+								<div class="media-list mb-30 hidden-sm hidden-xs">
+									<div class="media-left">
+										<img class="media-object alt-img-rounded media-img-size" src="res/drawing_ideas.png" alt="...">
+									</div>
+									<div class="media-body media-content-pright-20">
+										<h3 class="media-heading" id="drawidea">Drawing Ideas
+											<small><label class="label label-success">KIDS <span class="badge">6-12</span></label></small>
+										</h3>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+										consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+										proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-12 col-md-12 col-lg-6">
+								<div class="hidden-md hidden-lg text-center mt-30">
+									<h3 class="media-heading mb-30">Typing 101
+											<small><label class="label label-warning">KIDS <span class="badge">6-12</span></label></small>
+									</h3>
+									<img class="media-object alt-img-rounded media-img-size center-block mb-10" src="res/typing_101.png" alt="...">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+										consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+										proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+									</p>
+									<p>
+									- - - - -
+									</p>
+								</div>
+								<div class="media-list mb-30 hidden-sm hidden-xs">
+									<div class="media-left">
+										<img class="media-object alt-img-rounded media-img-size" src="res/typing_101.png" alt="...">
+									</div>
+									<div class="media-body media-content-pright-20">
+										<h3 class="media-heading" id="type101">Typing 101
+											<small><label class="label label-warning">KIDS <span class="badge">6-12</span></label></small>
+										</h3>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+										consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+										proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+										</p>
+									</div>
+								</div>
+							</div>	
+						</div>
+						<div class="row">
+							<div class="col-sm-12 col-md-12 col-lg-6">
+								<div class="hidden-md hidden-lg text-center mt-30">
+									<h3 class="media-heading mb-30">HTML9
+											<small><label class="label label-primary">TEENS <span class="badge">13-16</span></label></small>
+										</h3>
+									<img class="media-object alt-img-rounded media-img-size center-block mb-10" src="res/html9.png" alt="...">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+										consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+										proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+									</p>
+									<p>
+									- - - - -
+									</p>
+								</div>
+								<div class="media-list mb-30 hidden-sm hidden-xs">
+									<div class="media-left">
+										<img class="media-object alt-img-rounded media-img-size" src="res/html9.png" alt="...">
+									</div>
+									<div class="media-body media-content-pright-20">
+										<h3 class="media-heading" id="html9">HTML9
+											<small><label class="label label-primary">TEENS <span class="badge">13-16</span></label></small>
+										</h3>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+										consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+										proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-12 col-md-12 col-lg-6">
+								<div class="hidden-md hidden-lg text-center mt-30">
+									<h3 class="media-heading mb-30">CSS7
+										<small><label class="label label-danger">TEENS <span class="badge">13-16</span></label></small>
+									</h3>
+									<img class="media-object alt-img-rounded media-img-size center-block mb-10" src="res/css7.png" alt="...">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+										consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+										proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+									</p>
+									<p>
+									- - - - -
+									</p>
+								</div>
+								<div class="media-list mb-30 hidden-sm hidden-xs">
+									<div class="media-left">
+										<img class="media-object alt-img-rounded media-img-size" src="res/css7.png" alt="...">
+									</div>
+									<div class="media-body media-content-pright-20">
+										<h3 class="media-heading" id="css7">CSS7
+											<small><label class="label label-danger">TEENS <span class="badge">13-16</span></label></small>
+										</h3>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+										consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+										proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+										</p>
+									</div>
+								</div>
+							</div>	
+						</div>
+						<div class="row mt-30 text-center mb-30">
+							<div class="btn-group hidden-sm hidden-xs">
+								<a class="btn btn-warning btn-lg" name="nhome" href="#body">Home <span class="badge text-center">&nbsp;<span class="glyphicon glyphicon-tree-deciduous"></span>&nbsp;</span>
+								</a>								
+								<a class="btn btn-success btn-lg" name="ntesti" href="#testimonials">Testimonials <span class="badge text-center">&nbsp;<span class="glyphicon glyphicon-th-list"></span>&nbsp;</span>
+								</a>
+							</div>
+							<a class="btn btn-warning btn-md hidden-md hidden-lg" name="nhome" href="#body">Home <span class="badge text-center">&nbsp;<span class="glyphicon glyphicon-tree-deciduous"></span>&nbsp;</span>
+							</a>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+		<!-- TESTIMONIALS -->
+		<section class="container-fluid mt-30	" id="testimonials">
+			<div class="container alt-container-content panel panel-success no-mb"> <!-- style="border: 1px solid red;" -->
+				<div class="row panel-heading text-center">
+					<h1>
+						<strong>TESTIMONIALS</strong>
+					</h1>
+					<h3 style="margin-top: 0px;"><small style="font-style: italic;">"we keep, we do, when we hear from you..."</small> <!-- <br><small class="italic">- Earl Hapal | Sandbox, Co-Founder</small> --></h3>
+				</div>
+
+				<div class="row" style="background-color: transparent;">
+					<div class="container">
+						<div class="row mt-30">
+							<div class="col-sm-10 col-md-10 col-lg-10 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+								<div class="media-list mb-30">
+									<div class="media-left media-middle hidden-xs hidden-sm">
+										<img class="media-object alt-img-circle media-img-size" src="res/earl.jpg" alt="...">
+									</div>
+									<div class="media-body media-content-pleft-20">
+										<blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+										consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+										proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+										<small> Earl Hapal, Sandbox Co-Founder</small>
+										</blockquote>
+									</div>
+								</div>
+
+								<div class="media-list mb-30">
+									<div class="media-body media-content-pright-20">
+										<blockquote class="blockquote-reverse">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+										consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+										proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+										
+										<small>Anonymous, Satisfied Parent </small>
+										</blockquote>
+									</div>
+									<div class="media-right media-middle hidden-xs hidden-sm">
+										<img class="media-object alt-img-circle media-img-size" src="res/anonymous.jpg" alt="...">
+									</div>
+									
+								</div>
+							</div>	
+						</div>
+						
+						<div class="row mt-30 text-center mb-30">
+							<div class="btn-group hidden-sm hidden-xs">
+								<a class="btn btn-warning btn-lg" name="nhome" href="#body">Home <span class="badge text-center">&nbsp;<span class="glyphicon glyphicon-tree-deciduous"></span>&nbsp;</span>
+								</a>								
+								<a class="btn btn-info btn-lg" name="nwork" href="#workshop">Workshop <span class="badge text-center">&nbsp;<span class="glyphicon glyphicon-briefcase"></span>&nbsp;</span>
+								</a>
+								<a class="btn btn-danger btn-lg" name="nabout" href="#about">About <span class="badge text-center">&nbsp;<span class="glyphicon glyphicon-info-sign"></span>&nbsp;</span>
+								</a>
+							</div>
+							<a class="btn btn-warning btn-md hidden-md hidden-lg" name="nhome" href="#body">Home <span class="badge text-center">&nbsp;<span class="glyphicon glyphicon-tree-deciduous"></span>&nbsp;</span>
+							</a>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+		<!-- ABOUT -->
+		<section class="container-fluid" id="about">
+			<div class="container alt-container-content panel panel-warning no-mb"> <!-- style="border: 1px solid red;" -->
+				<div class="row panel-heading">
+					<div class="text-center">
+						<h1>
+							<strong class="">ABOUT</strong>
+						</h1>
+						<h3 style="margin-top: 0px;"><small style="font-style: italic;">"we tame dragons...roar!"</small> <!-- <br><small class="italic">- Earl Hapal | Sandbox, Co-Founder</small> --></h3>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="container">
+						<p class="jumbotron abt text-justify">
+						Once upon a time, there's an engineer. Though old, he has kept the child in him. He went camping and stargazing, thinking how to put a cap on a stone. Playful, thinkful, and with the help of his creativity, he thought about connecting technology, adults, kids and children.  <i>"Hey! A text editor can be a playground and the codes can be a shovel...play with others and share sand castles..."</i> said the old man. And then came January 29, 2018 - <strong>Sandbox</strong> was born.
+						</p>
+						<div class="row mt-30 text-center mb-30">
+							<div class="btn-group hidden-xs hidden-sm">
+								<a class="btn btn-warning btn-lg" name="nhome" href="#body">Home <span class="badge text-center">&nbsp;<span class="glyphicon glyphicon-tree-deciduous"></span>&nbsp;</span>
+								</a>
+								<a class="btn btn-primary btn-lg" name="ncontact" href="#contact">Contact Us <span class="badge text-center">&nbsp;<span class="glyphicon glyphicon-phone"></span>&nbsp;</span>
+								</a>
+							</div>
+							<a class="btn btn-warning btn-md hidden-md hidden-lg" name="nhome" href="#body">Home <span class="badge text-center">&nbsp;<span class="glyphicon glyphicon-tree-deciduous"></span>&nbsp;</span>
+							</a>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+		<!-- CONTACT -->
+		<aside class="container-fluid" id="contact">
+			<div class="container alt-container-content "> <!-- style="border: 1px solid red;" -->
+				<div class="row">
+					<div class="col-sm-12 col-md-12 col-lg-12 panel panel-danger">
+						<div class="row panel-heading">
+							<div class="text-center">
+								<h1>
+									<strong class="">CONTACT</strong>
+								</h1>
+								<!-- <h3 style="margin-top: 0px;"><small style="font-style: italic;">"A journey of a thousand miles begins with a single step" <small>- Rafiki, Lion King 1&frac12;</small></small> --> <!-- <br><small class="italic">- Earl Hapal | Sandbox, Co-Founder</small> --><!-- </h3> -->
+							</div>
+						</div>
+
+						<div class="row panel-body">
+							<address class="col-sm-12 col-md-6 col-lg-6 mt-30 mb-30 text-center">
+								<div class="row mb-30"><img class="img-responsive center-block img-rounded" src="res/map.png" alt="...">
+								</div>
+
+								<div class="row mb-10">
+									<strong>Sandbox, Inc.</strong><br>
+									3rd Floor Chibi Building, <br>
+									30 February Avenue, <br>
+									Full Metal Panic, Manila City
+									
+								</div>
+								<div class="row mb-10">
+									<abbr title="E-mail"><span class="glyphicon glyphicon-envelope"></span></abbr> info@sandboxxx.com.ph
+								</div> 
+								<div class="row">
+									<abbr title="Contact No."><span class="glyphicon glyphicon-phone"></span></abbr> 123-4567
+								</div>
+							</address>
+							<div class="col-sm-12 col-md-6 col-lg-6 mt-30 mb-30 text-center">
+								<div class="row mb-30" >
+									<div class="alt-divider hidden-md hidden-lg"></div>
+									<form class="col-sm-12 col-md-12 col-lg-12 center-block" action="" method="">
+										<p class="text-center mb-30">Are you here to share your story with us?<br>Inquire about workshops? Or, any other questions?<br><strong>Feel free to write us an email!</strong>
+										</p>
+										<input class="form-control mb-10" type="text" name="name" id="in_name" placeholder="What's your name?" required disabled>
+										<input class="form-control mb-10" type="email" name="email" id="in_email" placeholder="What's your e-mail address?" required disabled>
+										<input class="form-control mb-10" type="tel" name="number" id="in_number" placeholder="Enter your phone number" required disabled>
+										<textarea class="form-control mb-10" type="text" name="message" id="in_message" placeholder="How can we help you?" required disabled style="height: 200px;"></textarea>
+										<button class="btn btn-info mb-10 btn-group-justified" type="submit" name="submit" id="submit" disabled>Send</button>
+									</form>
+								</div>
+							</div>
+						</div>
+						<div class="row text-center mb-30">
+							<div class="btn-group hidden-xs hidden-sm">
+								<a class="btn btn-danger btn-lg" name="nabout" href="#about">About <span class="badge text-center">&nbsp;<span class="glyphicon glyphicon-info-sign"></span>&nbsp;</span>
+								</a>							
+								<a class="btn btn-warning btn-lg" name="nhome" href="#body">Home <span class="badge text-center">&nbsp;<span class="glyphicon glyphicon-tree-deciduous"></span>&nbsp;</span>
+								</a>								
+							</div>
+							<a class="btn btn-warning btn-md hidden-md hidden-lg" name="nhome" href="#body">Home <span class="badge text-center">&nbsp;<span class="glyphicon glyphicon-tree-deciduous"></span>&nbsp;</span>
+							</a>
+						</div>
+					</div>
+					
+				</div>	
+			</div>
+		</aside>
+
+		<!-- Engineer & FINAL TEASE-->
+		<section class="container-fluid" id="contact">
+			<div class="container alt-container-content"> <!-- style="border: 1px solid red;" -->
+				<div class="row">
+					<div class="col-sm-12 col-md-12 col-lg-12 center-block">
+						<div class="row no-p-m">
+							<div class="balloon center-block jumbotron" style="padding: 50px;">
+								<p class="mt-30 visible-xs visible-sm hidden-md hidden-lg" style="font-style: italic; font-size: 1.4em;">Games are games, 
+								coding is more than coding...
+								<p class="visible-xs visible-sm hidden-md hidden-lg"><strong>Coding is Games++</strong></p>
+								<p style="display: none;">Message
+								</p>
+								<img class="hidden-xs hidden-sm" src="res/tuitt_static_qr_code_without_logo.png" alt="Tuitt's Static QR Code" style="height: 190px; width: auto;border-radius: 50%; background-color: rgba(255,255,255,0.4)">
+
+								
+							</div>
+							<div class="row no-p-m">
+								<span style="color:black; z-index: 1;" class="caret bigger-caret center-block"></span>
+							</div>
+						<div class="row">	
+							<img src="res/player.png" class="center-block" alt="Player One" style="vertical-align: baseline;">
+						</div>
+					</div>
+					
+				</div>	
+			</div>
+		</section>
+
+		<!-- FOOTER -->
+		<footer class="text-center container-fluid" style="background: dodgerblue; color: white;">
+			<small>Copyright &copy; Sandbox 2018 | <abbr title="Cute & Little">Cutittle Designs</small>
+		</footer>
+
+
+		<!-- SCRIPTS HERE -->
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	    <!-- Include all compiled plugins (below), or include individual files as needed -->
+	    <script src="res/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	</body>
+</html>
