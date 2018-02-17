@@ -106,6 +106,10 @@
 .wink:focus,
 .wink:hover,
 .wink:active {
+	-webkit-filter: brightness(95%);
+	-moz-filter: brightness(95%);
+	-o-filter: brightness(95%);
+	-ms-filter: brightness(95%);
 	filter: brightness(95%);
 	/*filter: blur(1px);*/
 
