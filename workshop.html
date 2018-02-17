@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 	<head>
-		<title>Sandbox</title>
+		<title>Sandbox - Workshop</title>
 		<meta charset="utf-8">
    		<meta http-equiv="X-UA-Compatible" content="IE=edge">
     	<meta name="viewport" content="width=device-width, 	initial-scale=1">
@@ -215,23 +215,7 @@
 				color: white;
 				/*text-shadow: 0 0 5px white;*/
 			}	
-			.link-pad-fix {
-				 padding: 2px 0 !important;
-				color: white;
-			}
-			.link-bg-fix {
-				background: #f0ad4e;
-				padding: 10px 10px 10px 10px;	
-				border-radius: 2px;	
-				display: inline-block;
-				width: 100px;
 
-			}
-			.link-bg-fix:hover,
-			.link-bg-fix:focus,
-			.link-bg-fix:active {
-				background: #eea236;
-			}
 			.jumbotron-mobile {
 				background: transparent;
 				margin-top: 225px;
@@ -329,13 +313,14 @@
 						<span class="navbar-brand page btn btn-primary brand-nav" style="font-size: 2em; ">Sandbox</span>
 					</a>
 				</div>
-				<div class="collapse" id="minimenu">
-					<ul class="nav navbar-nav navbar-right hidden-lg hidden-md hidden-sm" style="text-align: right; padding-right: 15px;">
+				<div class="collapse pull-right" id="minimenu">
+					<ul class="nav navbar-nav navbar-right hidden-lg hidden-md hidden-sm" style="text-align: right; padding-right: 15px; padding-left: 15px;">
 						<!-- <li><a href="#" class="alt-a">Inquire Now!</li> -->
-						<li class="dropdown disabled"><a  class="link-pad-fix" href="workshop.html"><span class="link-bg-fix">Workshop</span></a>
+						<li class="dropdown disabled"><a  class="link-pad-fix disabled" href="workshop.html"><span class="link-bg-fix">Workshop</span></a>
 						</li>
 						<li><a  class="link-pad-fix" href="testimonials.html"><span class="link-bg-fix">Testimonials</span></a></li>
 						<li><a  class="link-pad-fix" href="about.html"><span class="link-bg-fix">About</span></a></li>
+						<li><a  class="link-pad-fix" href="index.html#contact"><span class="link-bg-fix-inq"><strong>Let's Go!</strong></span></a></li>
 					</ul>
 				</div>
 				<div class="collapse navbar-collapse navbar-default" id="navmenu">
@@ -850,13 +835,19 @@
 			</div>
 			<div class="row mt-30 text-center mb-30">
 				<div class="btn-group hidden-sm hidden-xs">
-					<a class="btn btn-warning btn-lg" name="nhome" href="index.html">Home <span class="badge text-center">&nbsp;<span class="glyphicon glyphicon-tree-deciduous"></span>&nbsp;</span>
+					<a class="btn btn-warning btn-lg" name="nhome" href="index.html">Home <span class="badge text-center"><span class="glyphicon glyphicon-tree-deciduous"></span></span>
+					</a>
+					<a class="btn btn-primary btn-lg" href="index.html#workshop">Less <span class="badge text-center"><span class="glyphicon glyphicon-resize-small"></span></span>
 					</a>								
-					<a class="btn btn-success btn-lg" name="ntesti" href="index.html#testimonials">Testimonials <span class="badge text-center">&nbsp;<span class="glyphicon glyphicon-th-list"></span>&nbsp;</span>
+<!-- 					<a class="btn btn-success btn-lg" name="ntesti" href="index.html#testimonials">Testimonials <span class="badge text-center">&nbsp;<span class="glyphicon glyphicon-th-list"></span>&nbsp;</span>
+					</a> -->
+				</div>
+				<div class="btn-group hidden-md hidden-lg">
+					<a class="btn btn-warning btn-md hidden-md hidden-lg" name="nhome" href="index.html">Home <span class="badge text-center"><span class="glyphicon glyphicon-tree-deciduous"></span></span>
+					</a>
+					<a class="btn btn-primary btn-md" href="index.html#workshop">Less <span class="badge text-center"><span class="glyphicon glyphicon-resize-small"></span></span>
 					</a>
 				</div>
-				<a class="btn btn-warning btn-md hidden-md hidden-lg" name="nhome" href="index.html">Home <span class="badge text-center">&nbsp;<span class="glyphicon glyphicon-tree-deciduous"></span>&nbsp;</span>
-				</a>
 			</div>
 		</section>
 		<!-- FOOTER DECORATION -->

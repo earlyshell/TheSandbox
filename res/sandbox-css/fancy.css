@@ -144,3 +144,39 @@ footer {
 .disabled {
 	text-shadow: 0 1px 1px dimgray;
 }
+
+.link-pad-fix {
+	padding: 2px 0 !important;
+	color: white;
+}
+.link-pad-fix[class*="disabled"] {
+	-webkit-filter: grayscale(100%) !important;
+	filter: grayscale(100%) !important;
+}
+.link-bg-fix {
+	background: #f0ad4e;
+	padding: 10px 10px 10px 10px;	
+	border-radius: 2px;	
+	display: inline-block;
+	width: 100px;
+
+}
+.link-bg-fix-inq {
+	background: #5bc0de;
+	padding: 10px 10px 10px 10px;	
+	border-radius: 2px;	
+	display: inline-block;
+	width: 100px;
+	border: 1px solid #46b8da;
+
+}
+.link-bg-fix:hover,
+.link-bg-fix:focus,
+.link-bg-fix:active {
+	background: #eea236;
+}
+.link-bg-fix-inq:hover,
+.link-bg-fix-inq:focus,
+.link-bg-fix-inq:active {
+	background: #46b8da;
+}

@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<title>Sandbox - Testimonials</title>
+		<meta charset="utf-8">
+   		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, 	initial-scale=1">
+
+		<link rel="shortcut icon" type="image/x-icon" href="res/logo.ico" />
+		<link href="https://fonts.googleapis.com/css?family=Fredoka+One|Nunito" rel="stylesheet">
+    	
+    	
+    	<link href="res/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet"><!-- Bootstrap -->
+
+    	<link href="res/sandbox-css/fancy.css" rel="stylesheet">
+
+    	<style> /*Some altered bootstrap and personal declarations*/
+/*	    	[class*="container"],
+	    	[class*="row"],
+	    	[class*="col"]  {
+	    		border: 1px solid red;
+	    	}*/ /*GUIDE*/
+	    	body {
+	    		font-family: 'Nunito', sans-serif;
+	    		/*background-color: skyblue;*/
+	    		background: url("res/sea.png");
+	    		background-attachment: fixed;
+	    	}
+/*	    	.burger-correction {
+	    		background-color: white;
+	    	}
+	    	.burger-bord-corr {
+	    		border: 1px solid white;
+	    	}*/
+	    	.logo-nav {
+	    		margin-left: 15px !important;
+	    		padding: 0;
+	    	}
+	    	.brand-nav {
+	    		font-family: 'Fredoka One', cursive;
+	    	}
+	    	.alt-a:link,
+	    	.alt-a:visited {
+	    		background-color: #5bc0de;
+	    		border-radius: 30px;
+	    		color: white;
+	    	}
+	    	.alt-a:hover,
+	    	.alt-a:focus,
+	    	.alt-a:active {
+	    		color: #337ab7;
+	    		border-radius: 30px;
+	    	}
+	    	.alt-container {
+	    		max-width: 600px;
+	    		max-height: 600px;
+	    		min-width: 400px;
+	    		min-height: 400px;
+	    		height: 600px;
+	    		width: 600px;
+	    	}
+			.alt-container-content-mb-0 {
+				margin-top: 25px;
+				/*margin-bottom: 50px;*/
+			}
+			.italic {
+				font-style: italic;
+			}
+			.media-img-size {
+				max-height: 125px;
+				max-width: 125px;
+			}
+			.media-content-pright-20 {
+				padding-right: 20px;
+			}
+			.media-content-pleft-20 {
+				padding-left: 20px;
+			}
+			.alt-divider{
+				height: 1px;
+				margin: 15px 0;
+				overflow: hidden;
+				background-color: #e5e5e5;
+			}
+			.alt-img-rounded {
+				border-radius: 15px;
+			}
+			.alt-img-circle {
+				/*border: 10px outset mediumseagreen;*/
+				border-radius: 50%;
+				box-shadow: 2px 2px 8px grey;
+			}
+			.mt-15 {
+				margin-top: 15px;
+			}
+			.mt-30 {
+				margin-top: 30px;
+			}
+			.mt-75 {
+				margin-top: 75px;
+			}
+			.mb-30 {
+				margin-bottom: 30px;
+			}
+			.mb-50 {
+				margin-bottom: 50px;
+			}
+			.mb-10 {
+				margin-bottom: 10px;
+			}
+			.no-mb {
+				margin-bottom: 0px;
+			}
+			.label,
+			a[class*="btn"] {
+				border-radius: 15px;
+			}
+			blockquote > small {
+				font-style: italic;
+			}
+			.abt {
+				background: transparent;
+				line-height: 3em;
+				text-shadow: 1px 1px 5px lightgrey;
+			}
+			.abt::first-letter{
+				text-transform: uppercase;
+				font-size: 3em;
+			}
+			.contact-label {
+				font-weight: bold;
+			}
+			.bigger-caret {
+				border-top: 20px dashed;
+				border-top: 20px solid \9;
+				border-right: 20px solid transparent;
+				border-left: 20px solid transparent;
+			}
+			/* Ultimate Nav Fix */
+			.navbar-default {
+   				background-color: transparent;	
+    			border: none;
+
+			}
+			.dropdown-menu {
+				font-size: 14px;
+				/*min-width: 110px;*/
+				width: 108px !important;
+				text-align: center;
+				list-style: none;
+				background-color: rgba(255,255,255,0.25);
+				border: none;
+				-webkit-background-clip: padding-box;
+				-moz-background-clip: padding-box;
+				-o-background-clip: padding-box;
+				-ms-background-clip: padding-box;
+			        background-clip: padding-box;
+				border-radius: 4px 0 4px 4px !important;
+				-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+				-moz-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+				-o-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+				-ms-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+			          box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+			}
+
+			.dropdown-menu > li > a {
+			  display: block;
+			  padding: 0;
+			  clear: both;
+			  font-weight: normal;
+			  line-height: 1.42857143;
+			  color: dimgrey;
+			  white-space: nowrap;
+			}
+			.dropdown-menu > li > a:hover,
+			.dropdown-menu > li > a:focus {
+				color: #fff;
+				text-decoration: none;
+				background-color: #FFDAB9;
+			}
+			.dropdown-menu > .active > a,
+			.dropdown-menu > .active > a:hover,
+			.dropdown-menu > .active > a:focus {
+				color: #fff;
+				text-decoration: none;
+				background-color: #FFDAB9;
+				outline: 0;
+			}
+			.navbar-default .navbar-nav>li>a:hover {
+				color: white;
+				text-shadow: 0 0 3px 5px white;
+			}
+			.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+				color: #555;
+				background-color: #e7e7e7;
+				border-radius: 4px 4px 0 0;
+			}
+			.no-p-m {
+				margin: 0;
+				padding: 0;
+			}
+			textarea {
+				resize: none;
+			}
+			.alt-.divider {
+				height: 1px;
+				margin: 9px 0;
+				overflow: hidden;
+				background-color: #e5e5e5;
+			}
+			.nav > li > a:hover,
+			.nav > li > a:focus {
+				text-decoration: none;
+				background-color: transparent;
+				color: white;
+				/*text-shadow: 0 0 5px white;*/
+			}	
+
+			.jumbotron-mobile {
+				background: transparent;
+				margin-top: 225px;
+				text-align: center;
+			}
+			.jumbotron-mobile > h1 {
+				font-weight: bolder;
+				color: white;
+				font-size: 10vw;
+				text-shadow: .75vw .75vw 1.5vw black;
+			}
+			.jumbotron-mobile > h3 {
+				font-weight: normal;
+				font-size: 4.5vw;
+				color: #fff;
+				font-style: italic;
+				text-shadow: .15vw .15vw .6vw grey;
+
+			}
+
+			/* Cursors -- apparently, when I try to set this on an external css, the cursors are not working. */ 
+			/*.tooltipcheat {
+				cursor: url("res/tooltipcheat.png"),auto;
+			}*/
+			.car {
+				-webkit-cursor: url("res/car.png") 53 23,auto;
+				-moz-cursor: url("res/car.png") 53 23,auto;
+				-o-cursor: url("res/car.png") 53 23,auto;
+				-ms-cursor: url("res/car.png") 53 23,auto;
+				cursor: url("res/car.png") 53 23,auto;
+			}
+			.cartop {
+				-webkit-cursor: url("res/car_top.png") 10 1,auto;
+				-moz-cursor: url("res/car_top.png") 10 1,auto;
+				-o-cursor: url("res/car_top.png") 10 1,auto;
+				-ms-cursor: url("res/car_top.png") 10 1,auto;
+				cursor: url("res/car_top.png") 10 1,auto;
+			}
+			.cartop-b {
+				-webkit-cursor: url("res/car_bottom.png") 10 53,auto;
+				-moz-cursor: url("res/car_bottom.png") 10 53,auto;
+				-o-cursor: url("res/car_bottom.png") 10 53,auto;
+				-ms-cursor: url("res/car_bottom.png") 10 53,auto;
+				cursor: url("res/car_bottom.png") 10 53,auto;
+			}
+			.car-back {
+				-webkit-cursor: url("res/car_backward.png") 1 23,auto;
+				-moz-cursor: url("res/car_backward.png") 1 23,auto;
+				-o-cursor: url("res/car_backward.png") 1 23,auto;
+				-ms-cursor: url("res/car_backward.png") 1 23,auto;
+				cursor: url("res/car_backward.png") 1 23,auto;
+			}
+			.train {
+				-webkit-cursor: url("res/train.png") 53 33,auto;
+				-moz-cursor: url("res/train.png") 53 33,auto;
+				-o-cursor: url("res/train.png") 53 33,auto;
+				-ms-cursor: url("res/train.png") 53 33,auto;
+				cursor: url("res/train.png") 53 33,auto;
+			}
+			.flip:hover {
+				content:url("res/hooray.png");
+			}
+			.dim {
+				-webkit-filter: contrast(90%);
+				-moz-filter: contrast(90%);
+				-o-filter: contrast(90%);
+				-ms-filter: contrast(90%);
+				filter: contrast(90%);
+			}
+			.glow:hover {
+				-webkit-filter: contrast(175%);
+				-moz-filter: contrast(175%);
+				-o-filter: contrast(175%);
+				-ms-filter: contrast(175%);
+				filter: contrast(175%);
+			}
+    	</style>
+	</head>
+	<body id="body">
+		<!-- CODE HERE -->
+		<div class="container-fluid">
+			<nav class="navbar" style="margin-top: 25px;
+				margin-bottom: 25px;">
+				<div class="navbar-header">
+					<!-- BURGER -->
+					<div class="btn-group navbar-toggle center-block hidden-lg hidden-md hidden-sm no-p-m">
+						<a href="index.html" class="btn-group hidden-lg hidden-md" >
+							<img class="navbar-brand logo-nav btn btn-warning" src="res/logo.png" alt="Sandbox Logo">
+						</a>
+						<span class="navbar-brand page btn btn-primary brand-nav" style="font-size: 2em;" data-toggle="collapse" data-target="#minimenu">Sandbox</span>
+						<span class="navbar-brand page btn btn-primary" data-toggle="collapse" data-target="#minimenu"><span class="glyphicon glyphicon-menu-hamburger"></span></span>
+					</div>
+					<a href="index.html" class="btn-group hidden-xs" >
+						<img class="navbar-brand logo-nav btn btn-warning" src="res/logo.png" alt="Sandbox Logo">
+						<span class="navbar-brand page btn btn-primary brand-nav" style="font-size: 2em; ">Sandbox</span>
+					</a>
+				</div>
+				<div class="collapse pull-right" id="minimenu">
+					<ul class="nav navbar-nav navbar-right hidden-lg hidden-md hidden-sm" style="text-align: right; padding-right: 15px; padding-left: 15px;">
+						<!-- <li><a href="#" class="alt-a">Inquire Now!</li> -->
+						<li class="dropdown"><a  class="link-pad-fix" href="workshop.html"><span class="link-bg-fix">Workshop</span></a>
+						</li>
+						<li class="disabled"><a  class="link-pad-fix disabled" href="testimonials.html"><span class="link-bg-fix">Testimonials</span></a></li>
+						<li><a  class="link-pad-fix" href="about.html"><span class="link-bg-fix">About</span></a></li>
+						<li><a  class="link-pad-fix" href="index.html#contact"><span class="link-bg-fix-inq"><strong>Let's Go!</strong></span></a></li>
+					</ul>
+				</div>
+				<div class="collapse navbar-collapse navbar-default" id="navmenu">
+					<ul class="nav navbar-nav navbar-right">
+						<!-- <li><a href="#" class="alt-a">Inquire Now!</li> -->
+						<li class="dropdown" style="margin-left: 10px;"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Workshop <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="index.html#drawidea">Drawing Ideas</a>
+								</li>
+								<li><a href="index.html#type101">Typing 101</a>
+								</li>
+								<li><a href="index.html#html9">HTML9</a>
+								</li>
+								<li><a href="index.html#css7">CSS7</a>
+								</li>
+							</ul>
+						</li>
+						<li class="disabled"><a href="testimonials.html" class="disabled">Testimonials</a></li>
+						<li><a href="about.html">About</a></li>
+						<li style="margin-left: 10px;"><form action="index.html#contact"><button class="btn btn-info btn-lg hidden-xs" style="margin-top: 3px; margin-right: 15px;">Inquire Now!</button></form></li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+
+		<!-- TESTIMONIALS -->
+		<section class="container-fluid mt-75" style="background-color: white; box-shadow: 0 0 3em 3em white; border-radius: 5em;"  id="workshop">
+			
+			<div class="container alt-container-content-mb-0 panel panel-success" id="drawidea"> <!-- style="border: 1px solid red;" -->
+				<div class="row panel-heading text-center">
+					<h1>
+						<strong>TESTIMONIALS</strong>
+					</h1>
+					<h3 style="margin-top: 0px;"><small style="font-style: italic;">"we keep, we do, when we hear from you..."</small> <!-- <br><small class="italic">- Earl Hapal | Sandbox, Co-Founder</small> --></h3>
+				</div>
+
+				<div class="row" style="background-color: transparent;">
+					<div class="container">
+						<div class="row mt-30">
+							<div class="col-sm-10 col-md-10 col-lg-10 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+								<div class="media-list mb-30">
+									<div class="media-left media-middle hidden-xs hidden-sm">
+										<img class="media-object alt-img-circle media-img-size" src="res/earl.jpg" alt="...">
+									</div>
+									<div class="media-body media-content-pleft-20">
+										<blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+										consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+										proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+										<small>Earl Hapal, Sandbox Co-Founder</small>
+										</blockquote>
+									</div>
+								</div>
+								<div class="media-list mb-30">
+									<div class="media-body media-content-pright-20">
+										<blockquote class="blockquote-reverse">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+										consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+										proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+										
+										<small>Anonymous, Satisfied Parent </small>
+										</blockquote>
+									</div>
+									<div class="media-right media-middle hidden-xs hidden-sm">
+										<img class="media-object alt-img-circle media-img-size" src="res/anonymous.jpg" alt="...">
+									</div>		
+								</div>
+								<div class="media-list mb-30">
+									<div class="media-left media-middle hidden-xs hidden-sm">
+										<img class="media-object alt-img-circle media-img-size" src="res/earl.jpg" alt="...">
+									</div>
+									<div class="media-body media-content-pleft-20">
+										<blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+										consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+										proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+										<small>Anonymous, Student</small>
+										</blockquote>
+									</div>
+								</div>
+								<div class="media-list mb-30">
+									<div class="media-body media-content-pright-20">
+										<blockquote class="blockquote-reverse">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+										consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+										proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+										
+										<small>Anonymous, Satisfied Parent </small>
+										</blockquote>
+									</div>
+									<div class="media-right media-middle hidden-xs hidden-sm">
+										<img class="media-object alt-img-circle media-img-size" src="res/anonymous.jpg" alt="...">
+									</div>		
+								</div>
+								<div class="media-list mb-30">
+									<div class="media-left media-middle hidden-xs hidden-sm">
+										<img class="media-object alt-img-circle media-img-size" src="res/earl.jpg" alt="...">
+									</div>
+									<div class="media-body media-content-pleft-20">
+										<blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+										consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+										proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+										<small>Anonymous, Student</small>
+										</blockquote>
+									</div>
+								</div>
+								<div class="media-list mb-30">
+									<div class="media-body media-content-pright-20">
+										<blockquote class="blockquote-reverse">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+										consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+										proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+										
+										<small>Anonymous, Satisfied Parent </small>
+										</blockquote>
+									</div>
+									<div class="media-right media-middle hidden-xs hidden-sm">
+										<img class="media-object alt-img-circle media-img-size" src="res/anonymous.jpg" alt="...">
+									</div>		
+								</div>
+							</div>	
+						</div>
+					</div>
+				</div>	
+			</div>
+			
+
+			<!-- PORTAL -->
+			<div class="row mt-30 text-center mb-30">
+				<div class="btn-group hidden-sm hidden-xs">
+					<a class="btn btn-warning btn-lg" name="nhome" href="index.html">Home <span class="badge text-center"><span class="glyphicon glyphicon-tree-deciduous"></span></span>
+					</a>
+					<a class="btn btn-primary btn-lg" href="index.html#testimonials">Less <span class="badge text-center"><span class="glyphicon glyphicon-resize-small"></span></span>
+					</a>								
+<!-- 					<a class="btn btn-success btn-lg" name="ntesti" href="index.html#testimonials">Testimonials <span class="badge text-center">&nbsp;<span class="glyphicon glyphicon-th-list"></span>&nbsp;</span>
+					</a> -->
+				</div>
+				<div class="btn-group hidden-md hidden-lg">
+					<a class="btn btn-warning btn-md hidden-md hidden-lg" name="nhome" href="index.html">Home <span class="badge text-center"><span class="glyphicon glyphicon-tree-deciduous"></span></span>
+					</a>
+					<a class="btn btn-primary btn-md" href="index.html#testimonials">Less <span class="badge text-center"><span class="glyphicon glyphicon-resize-small"></span></span>
+					</a>
+				</div>
+			</div>
+		</section>
+		<!-- FOOTER DECORATION -->
+		<!-- <section class="container-fluid" id="contact" style="margin-top: 5vw;">
+			<div class="container alt-container-content">
+				<div class="row" >
+					<div class="row no-p-m">
+						<div class="col-sm-12 col-md-12 col-lg-12 center-block">
+							<div class="balloon center-block jumbotron" style="padding: 50px;">
+								<p class="mt-30 visible-xs visible-sm hidden-md hidden-lg" style="font-style: italic; font-size: 1.4em;">Games are games, 
+								coding is more than coding...</p>
+								<p class="visible-xs visible-sm hidden-md hidden-lg"><strong>Coding is Games++</strong></p>
+								<p style="display: none;">Message
+								</p>
+								<img class="hidden-xs hidden-sm" src="res/tuitt_static_qr_code_without_logo.png" alt="Tuitt's Static QR Code" style="height: 190px; width: auto;border-radius: 50%; background-color: rgba(255,255,255,0.4)">
+							</div>
+							<div class="row no-p-m">
+								<span style="color:black; z-index: 1;" class="caret bigger-caret center-block"></span>
+							</div>
+						</div>
+						<div class="row">	
+							<img src="res/player.png" class="center-block" alt="Player One" style="vertical-align: baseline; height: 150px; width: auto;">
+						</div>
+					</div>			
+				</div>	
+			</div>
+		</section> -->
+		<!-- FOOTER -->
+		<div style="position: relative; margin-top: 3vw;">
+			<footer class="text-center container-fluid" style="background: dodgerblue; color: white;">
+				<small>Copyright &copy; Sandbox 2018 | <abbr title="Cute & Little">Cutittle Designs</abbr></small>
+			</footer>
+		</div>
+		<!-- Excluded Zoom below 50% from use case. Enjoy viewing at 50% up.  -->
+
+
+		<!-- SCRIPTS HERE -->
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	    <!-- Include all compiled plugins (below), or include individual files as needed -->
+	    <script src="res/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	</body>
+</html>
