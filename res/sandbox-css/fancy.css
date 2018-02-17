@@ -149,10 +149,7 @@ footer {
 	padding: 2px 0 !important;
 	color: white;
 }
-.link-pad-fix[class*="disabled"] {
-	-webkit-filter: grayscale(100%) !important;
-	filter: grayscale(100%) !important;
-}
+
 .link-bg-fix {
 	background: #f0ad4e;
 	padding: 10px 10px 10px 10px;	
@@ -179,4 +176,8 @@ footer {
 .link-bg-fix-inq:focus,
 .link-bg-fix-inq:active {
 	background: #46b8da;
+}
+
+.team-border {
+	border: 1px solid grey;
 }
