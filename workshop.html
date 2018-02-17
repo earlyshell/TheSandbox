@@ -332,16 +332,16 @@
 				<div class="collapse" id="minimenu">
 					<ul class="nav navbar-nav navbar-right hidden-lg hidden-md hidden-sm" style="text-align: right; padding-right: 15px;">
 						<!-- <li><a href="#" class="alt-a">Inquire Now!</li> -->
-						<li class="dropdown"><a  class="link-pad-fix" href="#workshop"><span class="link-bg-fix">Workshop</span></a>
+						<li class="dropdown disabled"><a  class="link-pad-fix" href="workshop.html"><span class="link-bg-fix">Workshop</span></a>
 						</li>
-						<li><a  class="link-pad-fix" href="#testimonials"><span class="link-bg-fix">Testimonials</span></a></li>
-						<li><a  class="link-pad-fix" href="#about"><span class="link-bg-fix">About</span></a></li>
+						<li><a  class="link-pad-fix" href="testimonials.html"><span class="link-bg-fix">Testimonials</span></a></li>
+						<li><a  class="link-pad-fix" href="about.html"><span class="link-bg-fix">About</span></a></li>
 					</ul>
 				</div>
 				<div class="collapse navbar-collapse navbar-default" id="navmenu">
 					<ul class="nav navbar-nav navbar-right">
 						<!-- <li><a href="#" class="alt-a">Inquire Now!</li> -->
-						<li class="dropdown" style="margin-left: 10px;"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Workshop <span class="caret"></span></a>
+						<li class="dropdown disabled" style="margin-left: 10px;"><a href="#" class="dropdown-toggle disabled" data-toggle="dropdown" role="button">Workshop <span class="caret disabled"></span></a>
 							<ul class="dropdown-menu">
 								<li><a href="#drawidea">Drawing Ideas</a>
 								</li>
@@ -353,20 +353,20 @@
 								</li>
 							</ul>
 						</li>
-						<li><a href="#testimonials">Testimonials</a></li>
-						<li><a href="#about">About</a></li>
-						<li style="margin-left: 10px;"><form action="#contact"><button class="btn btn-info btn-lg hidden-xs" style="margin-top: 3px; margin-right: 15px;">Inquire Now!</button></form></li>
+						<li><a href="testimonials.html">Testimonials</a></li>
+						<li><a href="about.html">About</a></li>
+						<li style="margin-left: 10px;"><form action="index.html#contact"><button class="btn btn-info btn-lg hidden-xs" style="margin-top: 3px; margin-right: 15px;">Inquire Now!</button></form></li>
 					</ul>
 				</div>
 			</nav>
 		</div>
 
 		<!-- WORKSHOP -->
-		<section class="container-fluid mt-75" id="maincontainer" style="background-color: white; box-shadow: 0 0 3em 3em white; border-radius: 5em;"  id="workshop">
+		<section class="container-fluid mt-75" style="background-color: white; box-shadow: 0 0 3em 3em white; border-radius: 5em;"  id="workshop">
 			
 			<!-- DRAWING IDEAS -->
-			<div class="container alt-container-content-mb-0 panel panel-success"> <!-- style="border: 1px solid red;" -->
-				<div class="row panel-heading wink label-success" data-toggle="collapse" data-target="#coldrawidea" data-parent="#maincontainer">
+			<div class="container alt-container-content-mb-0 panel panel-success" id="drawidea"> <!-- style="border: 1px solid red;" -->
+				<div class="row panel-heading wink label-success" data-toggle="collapse" data-target="#coldrawidea" data-parent="#workshop">
 					<div class="text-center">
 						<h1>
 							<strong class="">Drawing Ideas</strong>
@@ -383,7 +383,7 @@
 									<h3 class="media-heading mb-10"><strong>Description</strong> 
 									</h3><!-- 
 									<img class="media-object alt-img-rounded media-img-size center-block mb-10" src="res/drawing_ideas.png" alt="..."> -->
-									<p>The program is for <label class="label label-success">kids</label> age&nbsp;<span class="label label-default">6-12</span> years old. This aims to let the kids think while playing, and express their thoughts through drawings.</p>
+									<p>The program is for <label class="label label-success">kids</label> age&nbsp;<span class="label label-default">6-12</span> years old. This aims to let the kids think while playing, and express their thoughts through drawings.</p">
 									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -482,8 +482,8 @@
 				</div>
 			</div>
 			<!-- TYPING 101 -->
-			<div class="container alt-container-content-mb-0 panel panel-warning"> <!-- style="border: 1px solid red;" -->
-				<div class="row panel-heading wink label-warning" data-toggle="collapse" data-target="#coltype101" data-parent="#maincontainer">
+			<div class="container alt-container-content-mb-0 panel panel-warning" id="type101"> <!-- style="border: 1px solid red;" -->
+				<div class="row panel-heading wink label-warning" data-toggle="collapse" data-target="#coltype101" data-parent="#workshop">
 					<div class="text-center">
 						<h1>
 							<strong class="">Typing 101</strong>
@@ -603,8 +603,8 @@
 				</div>
 			</div>
 			<!-- HTML9 -->
-			<div class="container alt-container-content-mb-0 panel panel-info"> <!-- style="border: 1px solid red;" -->
-				<div class="row panel-heading wink label-info" data-toggle="collapse" data-target="#colhtml9" data-parent="#maincontainer">
+			<div class="container alt-container-content-mb-0 panel panel-info" id="html9"> <!-- style="border: 1px solid red;" -->
+				<div class="row panel-heading wink label-info" data-toggle="collapse" data-target="#colhtml9" data-parent="#workshop">
 					<div class="text-center">
 						<h1>
 							<strong class="">HTML9</strong>
@@ -621,7 +621,7 @@
 									<h3 class="media-heading mb-10"><strong>Description</strong> 
 									</h3><!-- 
 									<img class="media-object alt-img-rounded media-img-size center-block mb-10" src="res/drawing_ideas.png" alt="..."> -->
-									<p>The program is for <label class="label label-primary">teen</label> age&nbsp;<span class="label label-default">13-16</span> years old. This is your teen(s)' stepping stone to follow the path of becoming a web developer.</p>
+									<p>The program is for <label class="label label-primary">teens</label> age&nbsp;<span class="label label-default">13-16</span> years old. This is your teen(s)' stepping stone to follow the path of becoming a web developer.</p>
 									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -726,8 +726,8 @@
 				</div>
 			</div>
 			<!-- CSS7 -->
-			<div class="container alt-container-content-mb-0 panel panel-danger mb-50"> <!-- style="border: 1px solid red;" -->
-				<div class="row panel-heading wink label-danger" data-toggle="collapse" data-target="#colcss7" data-parent="#maincontainer">
+			<div class="container alt-container-content-mb-0 panel panel-danger mb-50" id="css7"> <!-- style="border: 1px solid red;" -->
+				<div class="row panel-heading wink label-danger" data-toggle="collapse" data-target="#colcss7" data-parent="#workshop">
 					<div class="text-center">
 						<h1>
 							<strong class="">CSS7</strong>
@@ -744,7 +744,7 @@
 									<h3 class="media-heading mb-10"><strong>Description</strong> 
 									</h3><!-- 
 									<img class="media-object alt-img-rounded media-img-size center-block mb-10" src="res/drawing_ideas.png" alt="..."> -->
-									<p>The program is for <label class="label label-danger">teen</label> age&nbsp;<span class="label label-default">13-16</span> years old. This is your teen(s)' stepping stone to follow the path of becoming a web developer.</p>
+									<p>The program is for <label class="label label-danger">teens</label> age&nbsp;<span class="label label-default">13-16</span> years old. This is your teen(s)' stepping stone to follow the path of becoming a web developer.</p>
 									<p><strong>Pre-requisite: HTML 9</strong></p>
 									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
