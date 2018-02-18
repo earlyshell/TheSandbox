@@ -23,7 +23,7 @@
 	    	body {
 	    		font-family: 'Nunito', sans-serif;
 	    		/*background-color: skyblue;*/
-	    		background-image: url("res/sea.png");
+	    		background-image: url("res/sea.png") !important;
 	    		background-attachment: fixed;
 	    		background-repeat: repeat;
 	    	}
@@ -227,18 +227,18 @@
 			.jumbotron-mobile {
 				background: transparent;
 				/*margin-top: 225px;*/
-				margin-top: 20vh;
+				/*margin-top: 20vh;*/
 				text-align: center;
 			}
 			.jumbotron-mobile > h1 {
 				font-weight: bolder;
 				color: white;
-				font-size: 10vw;
+				/*font-size: 5vw;*/
 				text-shadow: .75vw .75vw 1.5vw black;
 			}
-			.jumbotron-mobile > h3 {
+			.jumbotron-mobile > h4 {
 				font-weight: normal;
-				font-size: 4.5vw;
+				/*font-size: 2vw;*/
 				color: #fff;
 				font-style: italic;
 				text-shadow: .15vw .15vw .6vw grey;
@@ -360,10 +360,11 @@
 		<section class="container-fluid" style="height: 650px; background: url('res/attention_bg.png');">
 			<!-- Boat -->
 			<img src="res/dolphin.png" class="swim" alt="&nbsp;( ⚆ _ ⚆ )">
-			<div class="containter jumbotron jumbotron-mobile hidden-lg">
+			<div class="containter hidden-lg center-block" style="height: 600px; ">
+				<div style="position: relative; top: 40%;" class="no-p-m jumbotron jumbotron-mobile">
 				<h1>Start 'em young...</h1>
-				<h3>"happy now, happy later...because good study habit is a thing..."</h3>
-				<form action="#contact"><button name="inquire" class="btn btn-info btn-lg mt-30">Let's go!</button></form>
+				<h4>"happy now, happy later...because good study habit is a thing..."</h4>
+				<form action="#contact"><button name="inquire" class="btn btn-info btn-lg mt-30">Let's go!</button></form></div>
 			</div>	
 			<div class="container alt-container hidden-xs hidden-sm hidden-md dim" style="margin-top: 25px;">
 				<div class="row w600h100">
